@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Ring_Progress.svg" type="Texture" id=1]
+[ext_resource path="res://UI/Ring_Under.svg" type="Texture" id=2]
+[ext_resource path="res://UI/Inventory/Backpack.svg" type="Texture" id=3]
+[ext_resource path="res://UI/Inventory/Inventory.gd" type="Script" id=4]
+
+[node name="Inventory" type="TextureRect"]
+self_modulate = Color( 0, 0, 0, 1 )
+texture = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Normal" type="TextureProgress" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_progress = ExtResource( 1 )
+tint_progress = Color( 0.196078, 1, 0.196078, 1 )
+
+[node name="Burdened" type="TextureProgress" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_progress = ExtResource( 1 )
+tint_progress = Color( 1, 1, 0.196078, 1 )
+
+[node name="Stressed" type="TextureProgress" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_progress = ExtResource( 1 )
+tint_progress = Color( 1, 0.196078, 0.196078, 1 )
+
+[node name="Icon" type="TextureRect" parent="."]
+margin_right = 45.0
+margin_bottom = 45.0
+texture = ExtResource( 3 )
+stretch_mode = 4
