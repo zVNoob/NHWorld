@@ -5,28 +5,35 @@
 [ext_resource path="res://UI/Inventory/Backpack.svg" type="Texture" id=3]
 [ext_resource path="res://UI/Inventory/Inventory.gd" type="Script" id=4]
 
-[node name="Inventory" type="TextureRect"]
+[node name="Inventory" type="TextureButton"]
 self_modulate = Color( 0, 0, 0, 1 )
-texture = ExtResource( 2 )
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Normal" type="TextureProgress" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 45.0
+margin_bottom = 45.0
+value = 100.0
 texture_progress = ExtResource( 1 )
+fill_mode = 4
 tint_progress = Color( 0.196078, 1, 0.196078, 1 )
 
 [node name="Burdened" type="TextureProgress" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 45.0
+margin_bottom = 45.0
 texture_progress = ExtResource( 1 )
+fill_mode = 4
 tint_progress = Color( 1, 1, 0.196078, 1 )
 
 [node name="Stressed" type="TextureProgress" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 45.0
+margin_bottom = 45.0
+max_value = 50.0
 texture_progress = ExtResource( 1 )
-tint_progress = Color( 1, 0.196078, 0.196078, 1 )
+fill_mode = 4
+tint_progress = Color( 1, 0.196078, 0.196078, 0.568627 )
 
 [node name="Icon" type="TextureRect" parent="."]
 margin_right = 45.0

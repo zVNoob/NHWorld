@@ -1,8 +1,8 @@
 tool
-extends TextureRect
+extends TextureButton
 
-export var value = 1000
-export var max_value = 1000
+export var value = 20
+export var max_value = 20
 
 var Effect_Up = true
 
@@ -15,10 +15,7 @@ func _process(delta):
 	
 	var ratio = float(value) / max_value
 	
-	if ratio < 0.5:
-		$Progress.tint_progress.g = 2 * ratio
-	else:
-		$Progress.tint_progress.g = 1
+	$Progress.tint_progress.r = ratio
 	#effect
 	if value < max_value /100 * 10:
 		if Effect_Up:$Progress.tint_progress.a8 += 10
