@@ -1,0 +1,107 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://UI/Inventory/Equipment/Equipment.gd" type="Script" id=1]
+[ext_resource path="res://UI/Inventory/Equipment/Slot/Slot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Inventory/Equipment/HoldingItem.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Hat.svg" type="Texture" id=4]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Body.svg" type="Texture" id=5]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Boot.svg" type="Texture" id=6]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Amulet.svg" type="Texture" id=7]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Ring.svg" type="Texture" id=9]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Right.svg" type="Texture" id=10]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Gauntlet.svg" type="Texture" id=11]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Left.svg" type="Texture" id=12]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Cloak.svg" type="Texture" id=13]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Backpack.svg" type="Texture" id=14]
+[ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Glasses.svg" type="Texture" id=15]
+[ext_resource path="res://UI/Inventory/Equipment/BG.svg" type="Texture" id=16]
+
+[node name="Equipment" type="TextureRect"]
+self_modulate = Color( 0.117647, 0.117647, 0.117647, 1 )
+mouse_filter = 0
+texture = ExtResource( 16 )
+script = ExtResource( 1 )
+
+[node name="HoldingItem" parent="." instance=ExtResource( 3 )]
+
+[node name="Slot_Head" parent="." instance=ExtResource( 2 )]
+margin_left = 4.0
+margin_top = 4.0
+BG = ExtResource( 4 )
+
+[node name="Slot_Body" parent="." instance=ExtResource( 2 )]
+margin_left = 4.0
+margin_top = 36.0
+BG = ExtResource( 5 )
+
+[node name="Slot_Boot" parent="." instance=ExtResource( 2 )]
+margin_left = 4.0
+margin_top = 69.0
+margin_right = 34.0
+margin_bottom = 99.0
+BG = ExtResource( 6 )
+
+[node name="Slot_Amulet" parent="." instance=ExtResource( 2 )]
+margin_left = 36.0
+margin_top = 4.0
+margin_right = 66.0
+margin_bottom = 34.0
+BG = ExtResource( 7 )
+
+[node name="Slot_Glasses" parent="." instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_top = 4.0
+margin_right = 98.0
+margin_bottom = 34.0
+BG = ExtResource( 15 )
+
+[node name="Slot_Cloak" parent="." instance=ExtResource( 2 )]
+margin_left = 36.0
+margin_top = 36.0
+margin_right = 66.0
+margin_bottom = 66.0
+BG = ExtResource( 13 )
+
+[node name="Slot_Gauntlet" parent="." instance=ExtResource( 2 )]
+margin_left = 36.0
+margin_top = 69.0
+margin_right = 66.0
+margin_bottom = 99.0
+BG = ExtResource( 11 )
+
+[node name="Slot_LRing" parent="." instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_top = 36.0
+margin_right = 98.0
+margin_bottom = 66.0
+BG = ExtResource( 9 )
+
+[node name="Slot_RRing" parent="." instance=ExtResource( 2 )]
+margin_left = 100.0
+margin_top = 36.0
+margin_right = 130.0
+margin_bottom = 66.0
+BG = ExtResource( 9 )
+
+[node name="Slot_Left" parent="." instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_top = 69.0
+margin_right = 98.0
+margin_bottom = 99.0
+BG = ExtResource( 12 )
+
+[node name="Slot_Right" parent="." instance=ExtResource( 2 )]
+margin_left = 100.0
+margin_top = 69.0
+margin_right = 130.0
+margin_bottom = 99.0
+BG = ExtResource( 10 )
+
+[node name="Slot_Backpack" parent="." instance=ExtResource( 2 )]
+margin_left = 100.0
+margin_top = 4.0
+margin_right = 130.0
+margin_bottom = 34.0
+BG = ExtResource( 14 )
+
+[connection signal="DropItem" from="HoldingItem" to="." method="_DropItem"]

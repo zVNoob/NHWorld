@@ -9,12 +9,12 @@
 self_modulate = Color( 0, 0, 0, 1 )
 texture_normal = ExtResource( 1 )
 script = ExtResource( 4 )
-value = 1000
-max_value = 1000
 
 [node name="Progress" type="TextureProgress" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+max_value = 20.0
+value = 20.0
 texture_progress = ExtResource( 2 )
 fill_mode = 4
 tint_progress = Color( 1, 0, 1, 1 )

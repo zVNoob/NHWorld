@@ -22,3 +22,8 @@ func _process(delta):
 	else:$Stressed.tint_progress.a8 -= 10
 	if $Stressed.tint_progress.a8 >= 255: Effect_Up = false
 	if $Stressed.tint_progress.a8 <= 0: Effect_Up = true
+
+
+func _on_Inventory_pressed():
+	$Equipment.visible = !$Equipment.visible
+	$Arrow.visible = !$Arrow.visible
