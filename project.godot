@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://UI/Inventory/Equipment/Slot/Resource/BaseItemRes.gd"
 }, {
+"base": "Resource",
+"class": "BaseSpellResource",
+"language": "GDScript",
+"path": "res://UI/Magic/SpellBar/Spell/Resource/BaseSpellRes.gd"
+}, {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
@@ -21,6 +26,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "BaseItemResource": "",
+"BaseSpellResource": "",
 "GitAPI": ""
 }
 
@@ -29,11 +35,6 @@ _global_script_class_icons={
 config/name="NHWorld"
 run/main_scene="res://UI/UI.tscn"
 config/icon="res://icon.png"
-
-[display]
-
-window/size/width=1600
-window/size/height=900
 
 [editor]
 

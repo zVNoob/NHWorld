@@ -21,10 +21,6 @@ enum ItemType { GENERIC,
 				EQUIP_GLASSES
 			}
 
-export(PackedScene) var Configurer
-
-export(Array) var Child
-
 export(ItemType) var Type 
 
 func on_take(equipper : Node,slot : TextureButton):
@@ -46,4 +42,7 @@ func on_stopuse():
 	pass
 
 func process(delta:float):
+	pass
+
+func on_config():
 	pass

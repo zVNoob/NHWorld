@@ -78,3 +78,8 @@ func _on_Slot_mouse_entered():
 func _on_Slot_mouse_exited():
 	Focusing = false
 	Holder.IsSlot = false
+
+
+func _on_Config():
+	if Res != null:
+		Res.on_config()

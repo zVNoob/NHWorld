@@ -15,7 +15,7 @@ max_value = 2000.0
 value = 2000.0
 texture_progress = ExtResource( 2 )
 fill_mode = 4
-tint_progress = Color( 0, 1, 1, 1 )
+tint_progress = Color( 0, 0.501961, 1, 1 )
 
 [node name="Icon" type="TextureRect" parent="."]
 margin_right = 45.0
