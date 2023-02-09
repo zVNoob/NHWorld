@@ -35,7 +35,7 @@ margin_bottom = 45.0
 max_value = 50.0
 texture_progress = ExtResource( 1 )
 fill_mode = 4
-tint_progress = Color( 1, 0.196078, 0.196078, 0.137255 )
+tint_progress = Color( 1, 0.196078, 0.196078, 0.803922 )
 
 [node name="Icon" type="TextureRect" parent="."]
 margin_right = 45.0

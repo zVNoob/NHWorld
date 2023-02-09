@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://UI/Inventory/Equipment/Equipment.gd" type="Script" id=1]
 [ext_resource path="res://UI/Inventory/Equipment/Slot/Slot.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Body.svg" type="Texture" id=5]
 [ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Boot.svg" type="Texture" id=6]
 [ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Amulet.svg" type="Texture" id=7]
+[ext_resource path="res://UI/Inventory/Equipment/Slot/Resource/BaseItemRes.gd" type="Script" id=8]
 [ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Ring.svg" type="Texture" id=9]
 [ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Right.svg" type="Texture" id=10]
 [ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Gauntlet.svg" type="Texture" id=11]
@@ -15,6 +16,18 @@
 [ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Backpack.svg" type="Texture" id=14]
 [ext_resource path="res://UI/Inventory/Equipment/Slot_BG/Glasses.svg" type="Texture" id=15]
 [ext_resource path="res://UI/Inventory/Equipment/BG.svg" type="Texture" id=16]
+[ext_resource path="res://UI/Magic/Magic.svg" type="Texture" id=17]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 8 )
+name = ""
+texture = ExtResource( 17 )
+stackable = false
+stack_size = 1
+Max_HP = 1
+HP = 1
+Weight = 0.0
+Type = 0
 
 [node name="Equipment" type="TextureRect"]
 self_modulate = Color( 0.117647, 0.117647, 0.117647, 1 )
@@ -89,6 +102,7 @@ margin_top = 69.0
 margin_right = 98.0
 margin_bottom = 99.0
 BG = ExtResource( 12 )
+Res = SubResource( 1 )
 
 [node name="Slot_Right" parent="." instance=ExtResource( 2 )]
 margin_left = 100.0

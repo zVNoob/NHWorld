@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Magic/SpellBar/Spell/Spell.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/Magic/SpellBar/SpellHolder.gd" type="Script" id=2]
+
+[node name="SpellHolder" type="Node2D"]
+visible = false
+z_index = 1
+script = ExtResource( 2 )
+
+[node name="Spell" parent="." instance=ExtResource( 1 )]
+margin_left = -20.0
+margin_top = -20.0
+mouse_filter = 2
