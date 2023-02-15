@@ -24,3 +24,7 @@ func _process(delta):
 		if $Progress.tint_progress.a8 <= 0: Effect_Up = true
 	else:
 		$Progress.tint_progress.a8 = 255
+
+
+func _on_Magic_pressed():
+	$SpellBar.visible = ! $SpellBar.visible

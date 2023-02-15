@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/Modifier/ModifierBox.svg" type="Texture" id=1]
+
+[node name="ModifierBox" type="TextureRect"]
+self_modulate = Color( 0.533333, 0.423529, 1, 0.588235 )
+texture = ExtResource( 1 )

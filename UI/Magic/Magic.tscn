@@ -1,10 +1,59 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://UI/Ring_Under.svg" type="Texture" id=1]
 [ext_resource path="res://UI/Ring_Progress.svg" type="Texture" id=2]
 [ext_resource path="res://UI/Magic/Magic.svg" type="Texture" id=3]
 [ext_resource path="res://UI/Magic/Magic.gd" type="Script" id=4]
 [ext_resource path="res://UI/Magic/SpellBar/SpellBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/Magic/SpellBar/Spell/Resource/BaseSpellRes.gd" type="Script" id=6]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 6 )
+MP = 0
+Max_Memory = 1
+Memory = 1
+Cooldown = 1.0
+CooldownMax = 1.0
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 6 )
+MP = 0
+Max_Memory = 1
+Memory = 1
+Cooldown = 1.0
+CooldownMax = 1.0
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 6 )
+MP = 0
+Max_Memory = 1
+Memory = 1
+Cooldown = 1.0
+CooldownMax = 1.0
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 6 )
+MP = 0
+Max_Memory = 1
+Memory = 1
+Cooldown = 1.0
+CooldownMax = 1.0
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 6 )
+MP = 0
+Max_Memory = 1
+Memory = 1
+Cooldown = 1.0
+CooldownMax = 1.0
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 6 )
+MP = 0
+Max_Memory = 1
+Memory = 1
+Cooldown = 1.0
+CooldownMax = 1.0
 
 [node name="Magic" type="TextureButton"]
 self_modulate = Color( 0, 0, 0, 1 )
@@ -28,6 +77,10 @@ texture = ExtResource( 3 )
 stretch_mode = 4
 
 [node name="SpellBar" parent="." instance=ExtResource( 5 )]
-margin_left = 50.0
-margin_top = 2.0
-margin_right = 325.0
+margin_left = 51.0
+margin_top = -3.0
+margin_right = 326.0
+margin_bottom = 175.0
+Spell = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]
+
+[connection signal="pressed" from="." to="." method="_on_Magic_pressed"]

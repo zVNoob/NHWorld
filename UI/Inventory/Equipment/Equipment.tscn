@@ -41,11 +41,13 @@ script = ExtResource( 1 )
 margin_left = 4.0
 margin_top = 4.0
 BG = ExtResource( 4 )
+AcceptableType = 1
 
 [node name="Slot_Body" parent="." instance=ExtResource( 2 )]
 margin_left = 4.0
 margin_top = 36.0
 BG = ExtResource( 5 )
+AcceptableType = 3
 
 [node name="Slot_Boot" parent="." instance=ExtResource( 2 )]
 margin_left = 4.0
@@ -53,6 +55,7 @@ margin_top = 69.0
 margin_right = 34.0
 margin_bottom = 99.0
 BG = ExtResource( 6 )
+AcceptableType = 6
 
 [node name="Slot_Amulet" parent="." instance=ExtResource( 2 )]
 margin_left = 36.0
@@ -60,6 +63,7 @@ margin_top = 4.0
 margin_right = 66.0
 margin_bottom = 34.0
 BG = ExtResource( 7 )
+AcceptableType = 2
 
 [node name="Slot_Glasses" parent="." instance=ExtResource( 2 )]
 margin_left = 68.0
@@ -67,6 +71,7 @@ margin_top = 4.0
 margin_right = 98.0
 margin_bottom = 34.0
 BG = ExtResource( 15 )
+AcceptableType = 9
 
 [node name="Slot_Cloak" parent="." instance=ExtResource( 2 )]
 margin_left = 36.0
@@ -74,6 +79,7 @@ margin_top = 36.0
 margin_right = 66.0
 margin_bottom = 66.0
 BG = ExtResource( 13 )
+AcceptableType = 8
 
 [node name="Slot_Gauntlet" parent="." instance=ExtResource( 2 )]
 margin_left = 36.0
@@ -81,6 +87,7 @@ margin_top = 69.0
 margin_right = 66.0
 margin_bottom = 99.0
 BG = ExtResource( 11 )
+AcceptableType = 5
 
 [node name="Slot_LRing" parent="." instance=ExtResource( 2 )]
 margin_left = 68.0
@@ -88,6 +95,7 @@ margin_top = 36.0
 margin_right = 98.0
 margin_bottom = 66.0
 BG = ExtResource( 9 )
+AcceptableType = 4
 
 [node name="Slot_RRing" parent="." instance=ExtResource( 2 )]
 margin_left = 100.0
@@ -95,6 +103,7 @@ margin_top = 36.0
 margin_right = 130.0
 margin_bottom = 66.0
 BG = ExtResource( 9 )
+AcceptableType = 4
 
 [node name="Slot_Left" parent="." instance=ExtResource( 2 )]
 margin_left = 68.0
@@ -117,5 +126,6 @@ margin_top = 4.0
 margin_right = 130.0
 margin_bottom = 34.0
 BG = ExtResource( 14 )
+AcceptableType = 7
 
 [connection signal="DropItem" from="HoldingItem" to="." method="_DropItem"]

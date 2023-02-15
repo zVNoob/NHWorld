@@ -1,4 +1,4 @@
-extends TextureRect
+extends Control
 
 export var Spell = Array()
 
@@ -20,6 +20,14 @@ func _on_Spell_Hotbar_OnExpand():
 
 func _process(delta):
 	$Spell_Hotbar/Expand.visible = Spell.size()>5
+	$BG/Minimal.visible = Spell.size()<6
+	$BG/Top.visible = Spell.size()>5
+	$BG/Mid.visible = Spell.size()>5
+	$BG/Bot.visible = Spell.size()>5
+	var sz = min((min(Spell.size()-5,0)/6),3)+1
+	if !$DropBox.visible:sz = 0
+	$BG/Bot.margin_top = 47+45*sz
+	$BG/Mid.margin_bottom = 47+45*sz
 	
 func clear():
 	for i in range(5):

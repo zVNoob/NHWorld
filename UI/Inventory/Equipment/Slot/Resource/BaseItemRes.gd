@@ -36,7 +36,7 @@ func on_unequip():
 	return true
 
 func on_use(user : Node):
-	pass
+	return true
 
 func on_stopuse():
 	pass
