@@ -77,10 +77,11 @@ texture = ExtResource( 3 )
 stretch_mode = 4
 
 [node name="SpellBar" parent="." instance=ExtResource( 5 )]
-margin_left = 51.0
+visible = false
+margin_left = 57.0
 margin_top = -3.0
-margin_right = 326.0
+margin_right = 332.0
 margin_bottom = 175.0
-Spell = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ]
+Spell = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), SubResource( 6 ), null, null, null, null ]
 
 [connection signal="pressed" from="." to="." method="_on_Magic_pressed"]

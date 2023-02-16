@@ -28,3 +28,4 @@ func _process(delta):
 
 func _on_Magic_pressed():
 	$SpellBar.visible = ! $SpellBar.visible
+	$SpellBar/DropBox.visible = false

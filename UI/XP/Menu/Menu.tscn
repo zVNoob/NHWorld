@@ -72,7 +72,7 @@ Upgradeable = false
 margin_left = 5.0
 margin_top = 190.0
 Icon = ExtResource( 8 )
-Col = Color( 0, 0.784314, 1, 1 )
+Col = Color( 0, 0.494118, 1, 1 )
 Upgradeable = false
 
 [node name="VIT" parent="." instance=ExtResource( 3 )]

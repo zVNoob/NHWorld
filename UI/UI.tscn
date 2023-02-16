@@ -67,14 +67,14 @@ margin_top = 33.0
 margin_right = 36.0
 margin_bottom = 109.0
 
-[node name="ModifierBox" parent="Status" instance=ExtResource( 12 )]
-margin_left = 205.0
-margin_top = 31.0
-margin_right = 975.0
-margin_bottom = 61.0
-
 [node name="SkillBox" parent="Status" instance=ExtResource( 11 )]
 margin_left = 205.0
 margin_top = 1.0
 margin_right = 1005.0
 margin_bottom = 31.0
+
+[node name="ModifierBox" parent="Status" instance=ExtResource( 12 )]
+margin_left = 205.0
+margin_top = 31.0
+margin_right = 975.0
+margin_bottom = 61.0

@@ -24,7 +24,7 @@ func _process(delta):
 	$BG/Top.visible = Spell.size()>5
 	$BG/Mid.visible = Spell.size()>5
 	$BG/Bot.visible = Spell.size()>5
-	var sz = min((min(Spell.size()-5,0)/6),3)+1
+	var sz = min((Spell.size()-5)/6,3)
 	if !$DropBox.visible:sz = 0
 	$BG/Bot.margin_top = 47+45*sz
 	$BG/Mid.margin_bottom = 47+45*sz
